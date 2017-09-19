@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test Ajax</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="includes/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#button').click(function(){
+                    var input_text = $('#input_text').val();
+                    $.ajax({
+                        url: 'test_ajax.php',
+                        type: 'POST',
+                        data: {
+                            input_text: input_text
+                        },
+                        success: function(response){
+                            $('#response').html(response);
+                        }
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <input type="text" id="input_text" value="Ponga su nombre" />
+        <input type="button" id="button" value="Enviar" />
+        <div id="response">Aca va el resultado</div>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test Ajax</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="includes/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#button').click(function(){
+                    var id_aspirante = $('#id_aspirante').val();
+                    $.ajax({
+                        url: 'test_ajax_2.php',
+                        type: 'POST',
+                        data: {
+                            id_aspirante: id_aspirante
+                        },
+                        success: function(response){
+                            $('#response').html(response);
+                        }
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <input type="text" id="id_aspirante" value="Ponga el id del aspirante" />
+        <input type="button" id="button" value="Enviar" />
+        <table id="response"></table>
+    </body>
+</html>

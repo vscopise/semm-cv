@@ -1,0 +1,239 @@
+*{ font-family:Arial, Helvetica, sans-serif; margin:0; padding:0;}
+.wrap{margin:0 auto; width:990px; padding:10px;}
+.inicio { float: left; position: relative; width: 100%; }
+.inicio a.home { float:left; background-image:url("../images/logo-semm.png"); display:block; margin-bottom:20px; width:163px; height:153px;}
+.inicio h1{ float:left; margin: 20px 0 0 10px; color:#444444}
+
+.admin_menu { position: absolute; bottom: 20px; right: 0;}
+.admin_menu a {text-decoration: none; color: #111; }
+.admin_menu a:hover {text-decoration: underline;}
+
+/*form.mod_pwd {padding: 30px 0;}*/
+/*form.mod_pwd p {margin-bottom: 30px; }*/
+form.mod_pwd input[type=submit] {
+    width: 150px;
+}
+p.mensaje{ margin-top: 20px; }
+p.normal {color: green;}
+p.error {color: red;}
+
+.form_wrapper{background:#fff;border:1px solid #ddd;margin:0 auto;width:350px;font-size:16px;-moz-box-shadow:1px 1px 7px #ccc;-webkit-box-shadow:1px 1px 7px #ccc;box-shadow:1px 1px 7px #ccc;}
+.form_wrapper h3{padding:20px 30px 20px 30px;background-color:#444;color:#fff;font-size:25px;border-bottom:1px solid #ddd; margin-bottom:10px;}
+.form_wrapper form{display:none;background:#fff;}
+form.active{display:block;}
+form.login, form.activation {width:500px;}
+form.register, form.form1{width:975px;}
+form.form2, form.form3, form.form4, form.form5, form.form6, form.form7, form.form8, form.form9, form.form10, form.form11{width:975px; height:570px;}
+form.forgot_password{width:500px;}
+.form_wrapper .column{width:49%;float:left;}
+.form_wrapper a{text-decoration:none;color:#777;font-size:12px;}
+.form_wrapper a:hover{color:#000;}
+.form_wrapper label{display:block;padding:10px 30px 0px 30px;margin:10px 0px 0px 0px;font-size:14px;}
+.form_wrapper input[type="text"],
+.form_wrapper input[type="password"]{
+    border: solid 1px #E5E5E5;
+    margin: 5px 20px 10px 30px;
+    padding: 9px;
+    display:block;
+    font-size:16px;
+    width:430px;
+    background: #FFFFFF;
+    background: 
+        -webkit-gradient(
+            linear, 
+            left top, 
+            left 25, 
+            from(#FFFFFF), 
+            color-stop(4%, #EEEEEE), 
+            to(#FFFFFF)
+        );
+    background: 
+        -moz-linear-gradient(
+            top, 
+            #FFFFFF,
+            #EEEEEE 1px, 
+            #FFFFFF 25px
+            );
+    -moz-box-shadow: 0px 0px 8px #f0f0f0;
+    -webkit-box-shadow: 0px 0px 8px #f0f0f0;
+    box-shadow: 0px 0px 8px #f0f0f0;
+}
+#captcha_div {
+     float: right;
+}
+.form_wrapper input[name="captcha_code"]{
+     width: 200px;
+}
+#captcha_div a {
+    font-style: italic;
+    color: #ffa800;
+    text-shadow: 1px 1px 1px #fff;
+    margin-right: 5px;
+}
+#captcha_div span {
+    margin-right: 20px;
+    float: right;
+    cursor: pointer;
+    color: #ffa800;
+}
+.form_wrapper input[type="text"]:focus,
+.form_wrapper input[type="password"]:focus{
+    background:#feffef;
+}
+.form_wrapper .bottom{background-color:#404040;border-top:1px solid #ddd;margin-top:20px;clear:both;color:#fff;text-shadow:1px 1px 1px #000; position:relative; height:75px;}
+.form_wrapper .bottom a{display:block;padding:10px;color:#ffa800;text-shadow:1px 1px 1px #000;}
+.form_wrapper a.forgot{float:right;font-style:italic;line-height:24px;color:#ffa800;text-shadow:1px 1px 1px #fff;}
+.form_wrapper a.forgot:hover{color:#000;}
+.form_wrapper div.remember{float:left;width:140px;margin:20px 0px 20px 30px;font-size:11px;}
+.form_wrapper div.remember input{float:left;margin:2px 5px 0px 0px;}
+.form_wrapper div.message{margin: 10px; float:left; width:300px; font-size:12px;}
+.form_wrapper input[type="submit"][disabled]:active,
+.form_wrapper input[type="submit"][disabled]:hover,
+.form_wrapper input[type="submit"][disabled] {
+    background-color: #bbb;
+    color: #555;
+    font-weight: normal;
+}
+.form_wrapper input[type="button"],
+.form_wrapper input[type="submit"] {
+    background: #e3e3e3;
+    border: 1px solid #ccc;
+    color: #333;
+    font-family: "Trebuchet MS", "Myriad Pro", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 0 9px;
+    text-align: center;
+    width: 150px;
+    cursor:pointer;
+    float:right;
+    margin:15px 20px 10px 10px;
+    text-shadow: 0 1px 0px #fff;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: 0px 0px 2px #fff inset;
+    -webkit-box-shadow: 0px 0px 2px #fff inset;
+    box-shadow: 0px 0px 2px #fff inset;
+}
+.form_wrapper input[type="button"]:disabled{
+    background: #efefef;
+    color: #888;
+    cursor: default;
+}
+.form_wrapper input[type="submit"]:hover {
+    background: #d9d9d9;
+    -moz-box-shadow: 0px 0px 2px #eaeaea inset;
+    -webkit-box-shadow: 0px 0px 2px #eaeaea inset;
+    box-shadow: 0px 0px 2px #eaeaea inset;
+    color: #222;
+}
+span.step{float:right}
+span.step a{ color:#ccc;}
+span.step a:hover{ color:#aaa;}
+.form_wrapper .steps{
+    clear:both;
+    color:#fff;
+    height:45px;
+    margin-left:30px;
+    position:absolute;
+    top:15px;
+}
+.form_wrapper .steps ul { list-style:none; }
+.form_wrapper .steps li{ float:left;}
+.form_wrapper .steps li a{color:#444;text-shadow:none;display:inline-block;width:52px;height:42px;padding:0;margin:0;text-align:center;background-image:url(step.png);font:bold 20px/42px Arial, Helvetica, sans-serif;}
+.form_wrapper .steps li a.first{background-image:url(step-first.png);}
+.form_wrapper .steps li a.last{background-image:url(step-last.png);}
+.form_wrapper .steps li a.sel{background-image:url(step-sel.png);}
+.form_wrapper .steps li a.sel-first{background-image:url(step-sel-first.png);}
+.form_wrapper .steps li a.sel-last{background-image:url(step-sel-last.png);}
+.form_wrapper .steps li a.sel, .form_wrapper .steps li a.sel-first, .form_wrapper .steps li a.sel-last {color:#fff}
+
+
+table.data{ border-collapse:collapse; margin:0 20px 10px 20px; display:block; overflow:auto;height:392px;}
+table{ border-collapse:collapse; margin:0; display:block; }
+table tr{border-bottom: 1px solid #ccc; border-left:1px solid #ccc; border-right:1px solid #ccc; }
+
+table.tabs tr.header {border:1px solid #ccc;}
+
+table.admin-data, table.admin-result{ margin-left:20px;}
+table.admin-data tr{border: 1px solid #ccc;}
+table.admin-data tr.header td{background-color:#e3e3e3;}
+table.admin-result tr td{cursor: pointer;}
+
+table tr.last{border:0;}
+table td.add{border-bottom: 1px solid #ccc; border-left:1px solid #ccc; border-right:1px solid #ccc; text-align:center;}
+table.header { margin:0 20px 0 20px;}
+table.header tr.header { height:20px; border:1px solid #ccc;}
+table.header tr.header td { font: normal 14px Arial, Helvetica, sans-serif; background-color:#e3e3e3; border:0; text-align:center;}
+table td{font: normal 16px Arial, Helvetica, sans-serif; height:25px; }
+table.header tr.header td.add{width:18px;}
+table td.td0 {width:130px;}
+table td.td1 {width:150px;}
+table td.td2 {width:300px;}
+table td.td3 {width:445px;}
+table td.td4 {width:890px;}
+
+table td.no_leido {font-weight: bold; }
+
+
+table.data td a.add{background-image:url(add.png);}
+table.data td a.sub{background-image:url(sub.png);}
+table td.add{ width:17px;}
+table.data td a.add, table.data td a.sub{ display:block; width:15px; height:15px; padding:1px; background-repeat:no-repeat; background-position:center;}
+table.data td.sub{width:17px;}
+table.data tr td { text-align:center; font-size:12px;}
+table.data input[type="radio"]{ margin:0 20px 0 5px;}
+table.data input[type="text"]{ margin:0 auto; padding:0; font-size:12px; text-align:center; width:90%;background: none;}
+table.data input[type="text"]:focus{ background-color:#f0f0f0;}
+table tr td{ padding:2px 5px;}
+
+table tr.selected{background-color:#006699; color:#fff;}
+
+table.data span.habilidad { padding:0 20px 0 5px;}
+
+#accordion h3{font: 14px Arial, Helvetica, sans-serif; font-weight:bold;}
+#accordion label.label{font: 12px Arial, Helvetica, sans-serif; padding:0 10px; display:block; }
+#accordion .column2{float:left; margin: 0 20px 20px 0; position:relative;}
+#accordion input.text1{ width:280px; height:30px; border-radius:3px; border:1px solid #ccc; background-color:#f0f0f0; padding:0 5px; margin-bottom:10px;}
+#accordion select{padding: 0 5px; font:16px Arial,Helvetica,sans-serif;}
+#accordion input.text2{ width:180px; height:30px; border-radius:3px; border:1px solid #ccc; background-color:#f0f0f0; padding:0 5px; margin-bottom:10px;}
+#accordion .select {font: 16px normal Arial, Helvetica, sans-serif; height:200px; width:150px;}
+#accordion .button { float:left; position:absolute; top:200px; right:0; width:150px;}
+#accordion .button2 { float:left; position:absolute; top:150px; right:0; width:150px; font: 16px normal Arial, Helvetica, sans-serif;}
+.button3 { font: 16px normal Arial, Helvetica, sans-serif; padding: 0 10px; margin-top: 20px; float: right;}
+.detalles {font: 16px normal Arial, Helvetica, sans-serif; width:150px; float:right; margin-top:10px;}
+#data{border: 1px solid #d3d3d3; border-radius:4px; padding:10px 5px;}
+#tabs {font: 14px normal Arial, Helvetica, sans-serif;}
+#tabs div{ border:1px solid #ccc;}
+#tabs span.data { font-size:18px; line-height:24px;}
+#tabs .column{border:0; float:left; width:300px; margin-right:20px;}
+#tabs .last{ width:250px; margin:0}
+#tabs table{margin: 0;}
+#tabs table.tabs tr.header td{font: normal 12px Arial, Helvetica, sans-serif; background-color:#e6e6e6; border:0; text-align:center;}
+
+#tabs table.tabs td{font: 14px normal Arial, Helvetica, sans-serif;}
+
+
+
+
+
+form.upload_file{display:block;}
+
+input[type="button"].upload{width:100px; padding:2px 5px; margin:0 5px;}
+ul.estados li{
+    font: 12px Arial, Helvetica, sans-serif;
+    margin: 5px 0;
+    padding: 2px;
+}
+ul.estados li:hover{
+    background-color: #e7e7e7;
+}
+ul.estados li input[type='checkbox']{
+    float: right;
+}
+#resultado_estado{
+    font: 12px normal Arial, Helvetica, sans-serif;
+    padding-top: 20px;
+    float: right;
+}
