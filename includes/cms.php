@@ -14,38 +14,37 @@ error_reporting(E_ALL);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Semm - Buscador de CV</title>
-<link rel="stylesheet" type="text/css" href="../includes/css/styles.css" />
-<link rel="stylesheet" type="text/css" href="../includes/js/jquery-ui.min.css" />
-<link rel="stylesheet" type="text/css" href="../includes/js/jquery.ui.accordion.min.css" />
-<script type="text/javascript" src="../includes/js/jquery-1.9.1.min.js"></script>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <title>Semm - Buscador de CV</title>
+        <link rel="stylesheet" type="text/css" href="../includes/css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="../includes/js/jquery-ui.min.css" />
+        <link rel="stylesheet" type="text/css" href="../includes/js/jquery.ui.accordion.min.css" />
+        <script type="text/javascript" src="../includes/js/jquery-1.9.1.min.js"></script>
 
-<script type="text/javascript" src="../includes/js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="../includes/js/accordion.js"></script>
-<script type="text/javascript" src="../includes/js/buscador.js"></script>
-<script type="text/javascript" src="../includes/js/jquery.table2excel.min.js"></script>
-<script type="text/javascript">
-  $(function() {
-    $( "#tabs" ).tabs();
-  });
-</script>
-</head>
-
-<body>
-<div class="wrap">
-    <div class="form_wrap">
-	<div class="inicio">
-            <a class="home" href="<?php echo $_SERVER['PHP_SELF']; ?>"></a>
-            <h1>Buscador de CV</h1>
-            <div class="admin_menu">
-                <a href="<?php echo $_SERVER['PHP_SELF']; ?>">Postulantes</a> |
-                <a href="<?php echo $_SERVER['PHP_SELF']; ?>?action=USR">Administradores</a> |
-                <a href="<?php echo $_SERVER['PHP_SELF']; ?>?action=END">Cerrar sesi&oacute;n</a>
-            </div>
-	</div>
-	<div style="clear:both;"></div>
+        <script type="text/javascript" src="../includes/js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../includes/js/accordion.js"></script>
+        <script type="text/javascript" src="../includes/js/buscador.js"></script>
+        <script type="text/javascript" src="../includes/js/jquery.table2excel.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $( "#tabs" ).tabs();
+            });
+        </script>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="form_wrap">
+                <div class="inicio">
+                    <a class="home" href="<?php echo $_SERVER['PHP_SELF']; ?>"></a>
+                    <h1>Buscador de CV</h1>
+                    <div class="admin_menu">
+                        <a href="<?php echo $_SERVER['PHP_SELF']; ?>">Postulantes</a> |
+                        <a href="<?php echo $_SERVER['PHP_SELF']; ?>?action=USR">Administradores</a> |
+                        <a href="<?php echo $_SERVER['PHP_SELF']; ?>?action=END">Cerrar sesi&oacute;n</a>
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
         <?php 
             $action = filter_input( INPUT_GET, 'action' );
             $id = filter_input( INPUT_GET, 'ID' );
@@ -154,7 +153,6 @@ error_reporting(E_ALL);
                         <td style="width: 100px;"><?php echo $row['id_aspirante']?></td>
                         <td style="width: 800px;"><?php echo $row['name']?></td>
                     </tr>
-
                 <?php endwhile; ?>
                 </table>
             </div>
@@ -267,32 +265,38 @@ error_reporting(E_ALL);
             <h3>Informaci&oacute;n General</h3>
             <div>
   		<div class="column2">
-	  		<label class="label">Nombre:</label><input type="text" class="text1" id="name" />
-			<label class="label">Apellido:</label><input type="text" class="text1" id="last_name" />
-			<label class="label">Fecha nacimiento:</label><input type="text" class="text1" id="born_date" 
-			title="Entre la fecha con el formato dd/mm/yyyy" />
-			<label class="label">C&eacute;dula de Identidad:</label><input type="text" class="text1" id="ci_num" />
+                    <label class="label">Nombre:</label>
+                    <input type="text" class="text1" id="name" />
+                    <label class="label">Apellido:</label>
+                    <input type="text" class="text1" id="last_name" />
+                    <label class="label">Fecha nacimiento:</label>
+                    <input type="text" class="text1" id="born_date" title="Entre la fecha con el formato dd/mm/yyyy" />
+                    <label class="label">C&eacute;dula de Identidad:</label>
+                    <input type="text" class="text1" id="ci_num" />
 		</div>
   		<div class="column2">
-                    <label class="label">N&uacute;mero de Caja Profesional:</label><input type="text" class="text1" id="cp_num" />
-                    <label class="label">Tel&eacute;fono:</label><input type="text" class="text1" id="tel_num" />
-                    <label class="label">Celular:</label><input type="text" class="text1" id="cel_num" />
-                    <label class="label">A&ntilde;o egreso Fac. Medicina:</label><input type="text" class="text1" id="egreso_facultad" />
+                    <label class="label">N&uacute;mero de Caja Profesional:</label>
+                    <input type="text" class="text1" id="cp_num" />
+                    <label class="label">Tel&eacute;fono:</label>
+                    <input type="text" class="text1" id="tel_num" />
+                    <label class="label">Celular:</label>
+                    <input type="text" class="text1" id="cel_num" />
+                    <label class="label">A&ntilde;o egreso Fac. Medicina:</label>
+                    <input type="text" class="text1" id="egreso_facultad" />
 		</div>
   		<div class="column2">
-			<label class="label">Correo Electr&oacute;nico:</label><input type="text" class="text1" id="email" /><br />
-                        
-                        <div style=" width: 100%; height:70px; overflow-y: auto;">
-                            <?php 
-                                $sql = 'SELECT * FROM estados ORDER BY id_estado';
-                                $result = $base->safe_query($sql);
-                            ?>
-                            <?php if ( $base->NumFilas($result) != 0 ) : ?>
-                            <ul class="estados" id="buscar_estados">
-                                <?php while ($row = $base->f_array($result)): ?>
-                                <li><?php echo $row['nombre_estado'] ?><input class="estado" type="checkbox" id="<?php echo $row['id_estado']?>" /></li>
-                                <?php  endwhile; ?>
-                            </ul>
+                    <label class="label">Correo Electr&oacute;nico:</label>
+                    <input type="text" class="text1" id="email" /><br />
+                    <div style=" width: 100%; height:70px;">
+                        <?php 
+                            $result = $base->safe_query( 'SELECT * FROM estados ORDER BY id_estado' );
+                            if ( $base->NumFilas($result) != 0 ) :
+                        ?>
+                                <ul class="estados" id="buscar_estados">
+                                    <?php while ($row = $base->f_array($result)): ?>
+                                        <li><?php echo $row['nombre_estado'] ?><input class="estado" type="checkbox" id="<?php echo $row['id_estado']?>" /></li>
+                                    <?php  endwhile; ?>
+                                </ul>
                             <?php endif;?>
                         </div>
 			<input type="button" value="Borrar formulario" class="button2 borrar1" />
@@ -361,11 +365,11 @@ error_reporting(E_ALL);
             <h3 id="tab_detalles">Detalles</h3>
             <div id="tabs">
 		<ul>
-			<li><a href="#tab-1">Informaci&oacute;n personal</a></li>
-			<li><a href="#tab-2">Postgrados / Cursos</a></li>
-			<li><a href="#tab-3">Otros cursos / Exp. Laboral</a></li>
-			<li><a href="#tab-4">Congresos / Idiomas</a></li>
-			<li><a href="#tab-5">M&eacute;ritos / Referencias / Adjuntos</a></li>
+                    <li><a href="#tab-1">Informaci&oacute;n personal</a></li>
+                    <li><a href="#tab-2">Postgrados / Cursos</a></li>
+                    <li><a href="#tab-3">Otros cursos / Exp. Laboral</a></li>
+                    <li><a href="#tab-4">Congresos / Idiomas</a></li>
+                    <li><a href="#tab-5">M&eacute;ritos / Referencias / Adjuntos</a></li>
 		</ul>
 		<div id="tab-1">
                     <div class="column">
@@ -546,7 +550,7 @@ error_reporting(E_ALL);
             </div>
         </div>
         <?php endif; ?>
-    </div>
-</body>
+        </div>
+    </body>
 </html>
 <?php //$base->close(); ?>
