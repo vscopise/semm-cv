@@ -2,15 +2,6 @@
 ini_set('display_errors', 1); 
 error_reporting(E_ALL);
 
-//function __autoload($nombre_clase) {
-    //include 'clases/' . $nombre_clase . '.php';
-    //include 'clases/connection.php';
-//}
-
-
-//$base = new connection;
-//global $base;
-
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -260,8 +251,7 @@ error_reporting(E_ALL);
             //exit();
         endif;
         ?>
-        
-	<div id="accordion">
+        <div id="accordion">
             <h3>Informaci&oacute;n General</h3>
             <div>
   		<div class="column2">
@@ -287,20 +277,18 @@ error_reporting(E_ALL);
   		<div class="column2">
                     <label class="label">Correo Electr&oacute;nico:</label>
                     <input type="text" class="text1" id="email" /><br />
-                    <div style=" width: 100%; height:70px;">
-                        <?php 
-                            $result = $base->safe_query( 'SELECT * FROM estados ORDER BY id_estado' );
-                            if ( $base->NumFilas($result) != 0 ) :
-                        ?>
-                                <ul class="estados" id="buscar_estados">
-                                    <?php while ($row = $base->f_array($result)): ?>
-                                        <li><?php echo $row['nombre_estado'] ?><input class="estado" type="checkbox" id="<?php echo $row['id_estado']?>" /></li>
-                                    <?php  endwhile; ?>
-                                </ul>
-                            <?php endif;?>
-                        </div>
-			<input type="button" value="Borrar formulario" class="button2 borrar1" />
-			<input type="button" value="Buscar" class="button buscar" />
+                    <?php $result = $base->safe_query( 'SELECT * FROM estados ORDER BY id_estado' ); ?>
+                    <div style=" width: 100%; height:70px; overflow-y: auto;">
+                        <?php if ( $base->NumFilas($result) != 0 ) : ?>
+                        <ul class="estados" id="buscar_estados">
+                            <?php while ($row = $base->f_array($result)): ?>
+                            <li><?php echo $row['nombre_estado'] ?><input class="estado" type="checkbox" id="<?php echo $row['id_estado']?>" /></li>
+                            <?php  endwhile; ?>
+                        </ul>
+                        <?php endif;?>
+                    </div>
+                    <input type="button" value="Borrar formulario" class="button2 borrar1" />
+                    <input type="button" value="Buscar" class="button buscar" />
 		</div>
             </div>
             <h3>Formaci&oacute;n de Postgrado / Cursos de Apoyo Extrahospitalario / Otros Cursos / Experiencia Laboral</h3>
@@ -371,7 +359,7 @@ error_reporting(E_ALL);
                     <li><a href="#tab-4">Congresos / Idiomas</a></li>
                     <li><a href="#tab-5">M&eacute;ritos / Referencias / Adjuntos</a></li>
 		</ul>
-		<div id="tab-1">
+                <div id="tab-1">
                     <div class="column">
                         <input type="hidden" id="id_del_aspirante" value="" />
                         Nombre completo: <span class="data" id="nombre_completo"></span><br />
